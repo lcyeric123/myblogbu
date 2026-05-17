@@ -9,13 +9,13 @@ categories: 开发文档
 版本：V1.0
 
 ## 基础信息
-接口域名：https://translate.ericse.bond
+接口域名：https://t.ericse.bond
 请求方式：GET
 传输协议：HTTPS
 
 ## 接口地址
 ```http
-GET https://translate.ericse.bond/api/translate
+GET https://t.ericse.bond/api/translate
 ```
  
 请求参数
@@ -105,7 +105,7 @@ Python
   
 import requests
 
-url = "https://translate.ericse.bond/api/translate"
+url = "https://t.ericse.bond/api/translate"
 params = {
     "text": "hello world",
     "from": "en-us",
@@ -119,7 +119,7 @@ JavaScript 前端
  
 ```javascript
   
-fetch("https://translate.ericse.bond/api/translate?text=hello&from=en-us&to=zh")
+fetch("https://t.ericse.bond/api/translate?text=hello&from=en-us&to=zh")
 .then(res => res.json())
 .then(data => {
     console.log(data.translation)
@@ -155,7 +155,7 @@ import java.io.InputStreamReader;
 
 public class TranslateApi {
     public static void main(String[] args) throws Exception {
-        String apiUrl = "https://translate.ericse.bond/api/translate?text=hello&from=en-us&to=zh";
+        String apiUrl = "https://t.ericse.bond/api/translate?text=hello&from=en-us&to=zh";
         URL url = new URL(apiUrl);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
@@ -177,7 +177,7 @@ PHP
 $text = "hello";
 $from = "en-us";
 $to = "zh";
-$api = "https://translate.ericse.bond/api/translate?text={$text}&from={$from}&to={$to}";
+$api = "https://t.ericse.bond/api/translate?text={$text}&from={$from}&to={$to}";
 echo file_get_contents($api);
 ?>
  
@@ -195,7 +195,7 @@ import (
 )
 
 func main() {
-	resp, err := http.Get("https://translate.ericse.bond/api/translate?text=hello&from=en-us&to=zh")
+	resp, err := http.Get("https://t.ericse.bond/api/translate?text=hello&from=en-us&to=zh")
 	if err != nil {
 		return
 	}
