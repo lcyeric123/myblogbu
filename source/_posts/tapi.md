@@ -66,7 +66,7 @@ bg      保加利亚语
 he      希伯来语
 fa      波斯语
  
- ```
+```
 成功响应示例
  
 ```json
@@ -80,7 +80,7 @@ fa      波斯语
   "translation": "你好"
 }
  
- ```
+```
 错误响应格式
  
 空文本请求
@@ -89,13 +89,13 @@ fa      波斯语
   
 {"status":400,"request_time":"2026/5/17 20:00:00","msg":"翻译内容不能为空"}
  
- ```
+```
 服务异常
  
 ```json
   
 {"status":500,"request_time":"2026/5/17 20:00:00","msg":"翻译服务异常"}
- ```
+```
  
 代码调用示例
  
@@ -114,7 +114,7 @@ params = {
 result = requests.get(url, params=params)
 print(result.json())
  
- ```
+```
 JavaScript 前端
  
 ```javascript
@@ -125,7 +125,7 @@ fetch("https://translate.ericse.bond/api/translate?text=hello&from=en-us&to=zh")
     console.log(data.translation)
 })
  
- 
+```
 Node.js
  
 ```javascript
@@ -142,7 +142,7 @@ async function translate() {
     console.log(res.data)
 }
 translate()
- ```
+```
  
 Java
  
@@ -167,7 +167,7 @@ public class TranslateApi {
         reader.close();
     }
 }
- ```
+```
  
 PHP
  
@@ -203,7 +203,7 @@ func main() {
 	body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(body))
 }
- ```
+```
  
 C#
  
@@ -222,7 +222,7 @@ class ApiTest
     }
 }
  
- ```
+```
 附加说明
  
 1. 接口全局开放跨域，支持任意客户端直接调用
