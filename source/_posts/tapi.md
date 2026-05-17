@@ -16,22 +16,22 @@ categories: 开发文档
 ## 接口地址
 ```http
 GET https://translate.ericse.bond/api/translate
- 
+```
  
 请求参数
  
-json
+```json
   
 {
   "text": "待翻译文本",
   "from": "源语言代码",
   "to": "目标语言代码"
 }
- 
+```
  
 语言代码对照表
- 
-plaintext
+
+```plaintext
   
 zh      中文
 en-us   美式英语
@@ -66,10 +66,10 @@ bg      保加利亚语
 he      希伯来语
 fa      波斯语
  
- 
+ ```
 成功响应示例
  
-json
+```json
   
 {
   "status": 200,
@@ -80,28 +80,28 @@ json
   "translation": "你好"
 }
  
- 
+ ```
 错误响应格式
  
 空文本请求
  
-json
+```json
   
 {"status":400,"request_time":"2026/5/17 20:00:00","msg":"翻译内容不能为空"}
  
- 
+ ```
 服务异常
  
-json
+```json
   
 {"status":500,"request_time":"2026/5/17 20:00:00","msg":"翻译服务异常"}
- 
+ ```
  
 代码调用示例
  
 Python
  
-python
+```python
   
 import requests
 
@@ -114,10 +114,10 @@ params = {
 result = requests.get(url, params=params)
 print(result.json())
  
- 
+ ```
 JavaScript 前端
  
-javascript
+```javascript
   
 fetch("https://translate.ericse.bond/api/translate?text=hello&from=en-us&to=zh")
 .then(res => res.json())
@@ -128,7 +128,7 @@ fetch("https://translate.ericse.bond/api/translate?text=hello&from=en-us&to=zh")
  
 Node.js
  
-javascript
+```javascript
   
 const axios = require("axios");
 async function translate() {
@@ -142,11 +142,11 @@ async function translate() {
     console.log(res.data)
 }
 translate()
- 
+ ```
  
 Java
  
-java
+```java
   
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -167,11 +167,11 @@ public class TranslateApi {
         reader.close();
     }
 }
- 
+ ```
  
 PHP
  
-php
+```php
   
 <?php
 $text = "hello";
@@ -181,10 +181,10 @@ $api = "https://translate.ericse.bond/api/translate?text={$text}&from={$from}&to
 echo file_get_contents($api);
 ?>
  
- 
+ ```
 Go
  
-go
+```go
   
 package main
 
@@ -203,11 +203,11 @@ func main() {
 	body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(body))
 }
- 
+ ```
  
 C#
  
-csharp
+```csharp
   
 using System;
 using System.Net;
@@ -222,7 +222,7 @@ class ApiTest
     }
 }
  
- 
+ ```
 附加说明
  
 1. 接口全局开放跨域，支持任意客户端直接调用
